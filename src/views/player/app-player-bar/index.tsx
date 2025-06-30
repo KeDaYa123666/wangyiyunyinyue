@@ -94,6 +94,7 @@ const AppPlayerBar: React.FC<IProps> = () => {
     dispatch(changeLyricIndexAction(index))
 
     // 5.展示对应的歌词
+    //不知道为啥antd的message组件无效果
     // message.open({
     //   content: lyrics[index].text,
     //   key: 'lyric',
@@ -103,6 +104,8 @@ const AppPlayerBar: React.FC<IProps> = () => {
   }
 
   function handleTimeEnded() {
+    console.log('网易云音乐')
+
     if (playMode === 2) {
       audioRef.current!.currentTime = 0
       audioRef.current?.play()
