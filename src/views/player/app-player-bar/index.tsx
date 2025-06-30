@@ -104,8 +104,6 @@ const AppPlayerBar: React.FC<IProps> = () => {
   }
 
   function handleTimeEnded() {
-    console.log('网易云音乐')
-
     if (playMode === 2) {
       audioRef.current!.currentTime = 0
       audioRef.current?.play()
